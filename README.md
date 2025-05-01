@@ -36,27 +36,25 @@ Before running the script, ensure you have the following installed and configure
 
 ## Configuration
 
-*   **AWS Account ID:** The script currently has a hardcoded `AWS_ACCOUNT_ID` variable near the top. **Verify and update this variable** with your correct AWS Account ID before running.
-*   **AWS Credentials:** Ensure your environment is configured with AWS credentials that have sufficient permissions. This is typically done via environment variables (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN`), an AWS credentials file (`~/.aws/credentials`), or an EC2 instance profile.
+*   **AWS Credentials:** Ensure your AWS CLI is configured with credentials that have sufficient permissions. This is typically done using the `aws configure` command.
 *   **AWS Region:** The script attempts to detect the AWS region automatically (from boto3 session, EC2 metadata). If detection fails, it will prompt the user.
 
 ## Usage
 
 1.  Clone the repository (if you haven't already).
 2.  Navigate to the repository directory in your terminal.
-3.  Ensure the `AWS_ACCOUNT_ID` variable in `support-eks-cluster.py` is set correctly.
-4.  Install the required Python module:
+3.  Install the required Python module:
     ```bash
     pip install boto3
     ```
-5.  Run the script:
+4.  Run the script:
     ```bash
     python support-eks-cluster.py
     ```
-6.  Follow the interactive prompts to configure the cluster name, nodegroup name, instance type, and node scaling parameters. Default values are provided.
-7.  The script will output the progress of each step.
-8.  If the IAM OIDC provider is missing, the script will attempt to create it using `eksctl`. If `eksctl` is not found or fails, the script will exit with instructions for manual association.
-9.  After cluster creation, you will be asked if you want to deploy Solace PubSub+.
+5.  Follow the interactive prompts to configure the cluster name, nodegroup name, instance type, and node scaling parameters. Default values are provided.
+6.  The script will output the progress of each step.
+7.  If the IAM OIDC provider is missing, the script will attempt to create it using `eksctl`. If `eksctl` is not found or fails, the script will exit with instructions for manual association.
+8.  After cluster creation, you will be asked if you want to deploy Solace PubSub+.
 
 ## Notes
 
