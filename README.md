@@ -93,7 +93,7 @@ Before running `support-cluster-creation.py`, ensure you have the following inst
 1.  **Python 3:** The script is written in Python 3.
 2.  **Cloud Provider CLI:**
     *   **For Azure (AKS):** [Azure CLI (`az`)](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) installed and logged in (`az login`).
-    *   **For Google Cloud (GKE):** [Google Cloud SDK (`gcloud`)](https://cloud.google.com/sdk/docs/install) installed and initialized (`gcloud init`).
+    *   **For Google Cloud (GKE):** [Google Cloud SDK (`gcloud`)](https://cloud.google.com/sdk/docs/install) installed (Also elect to install the GKE authentication plugin: gke-gcloud-auth-plugin) and initialized (`gcloud init`).
 3.  **`kubectl`:** The Kubernetes command-line tool.
 4.  **(Optional) Helm:** Required only if you choose to deploy Solace PubSub+. ([Installation Guide](https://helm.sh/docs/intro/install/))
 5.  **(Optional, for ECR):**
